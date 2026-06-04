@@ -24,6 +24,17 @@
             --muted: #9BA0A8;
             --font-display: 'Plus Jakarta Sans', sans-serif;
             --font-body: 'Inter', sans-serif;
+            .logo-img {
+    height: 24px; /* Perfectly sized for the 60px nav */
+    width: auto;
+    /* This filter turns the black logo into your signature Acid Green */
+    filter: invert(88%) sepia(21%) saturate(635%) hue-rotate(36deg) brightness(102%) contrast(92%);
+    transition: transform 0.3s ease;
+}
+
+.logo:hover .logo-img {
+    transform: rotate(-5deg) scale(1.1);
+}
         }
 
         * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -117,10 +128,10 @@
 </head>
 <body>
 
-    <nav>
+<nav>
         <a href="#" class="logo">
-            <svg width="28" height="28" viewBox="0 0 36 36"><rect width="36" height="36" rx="4" fill="%23C8F5A0"/><rect x="7" y="5" width="22" height="7" fill="%230A0B0D"/><rect x="7" y="15" width="16" height="6" fill="%230A0B0D"/><rect x="7" y="24" width="22" height="7" fill="%230A0B0D"/></svg>
-            ENKLAVE
+            <img src="enklave-logo.png" alt="Enklave Logo" class="logo-img">
+            <span>ENKLAVE</span>
         </a>
         <ul class="nav-links">
             <li><a href="#work">Case Study</a></li>
@@ -129,7 +140,6 @@
         </ul>
         <a href="#contact" class="nav-cta">Initiate Project</a>
     </nav>
-
     <div class="hero">
         <span class="hero-tag">Strategy · Design · Development</span>
         <h1>We build the digital <span>infrastructure</span> of your future.</h1>
